@@ -36,7 +36,7 @@ function GetReport() {
 
     useEffect(() => {
       const fetchResearchers = async () => {
-        const apiUrl = 'http://127.0.0.1:8000/api/researchers/'; 
+        const apiUrl = 'https://participant-tracker-backend.onrender.com/api/researchers/'; 
     
         fetch(apiUrl, {
           method: 'GET',
@@ -74,7 +74,7 @@ function GetReport() {
     
       const handleSubmitFilter = (e) => {
         e.preventDefault();
-        const apiUrl = 'http://127.0.0.1:8000/api/filter_by_date_researcher/'; 
+        const apiUrl = 'https://participant-tracker-backend.onrender.com/api/filter_by_date_researcher/'; 
         console.log(formData);
     
         fetch(apiUrl, {
@@ -100,7 +100,7 @@ function GetReport() {
         //setFormExperimentID({...formExperimentID, ['experiment_id']: experiment_id})
 
 
-        const apiUrl = "http://127.0.0.1:8000/api/get_report/";
+        const apiUrl = "https://participant-tracker-backend.onrender.com/api/get_report/";
 
         fetch(apiUrl, {
           method: 'POST',

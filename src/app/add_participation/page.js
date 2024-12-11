@@ -29,7 +29,7 @@ function UserForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const apiUrl = 'http://127.0.0.1:8000/api/participation/';
+    const apiUrl = 'https://participant-tracker-backend.onrender.com/api/participation/';
 
     fetch(apiUrl, {
       method: 'POST',
@@ -37,16 +37,7 @@ function UserForm() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log('Success:', data);
-        alert('Form submitted successfully!');
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-        alert('There was an error submitting the form.');
-      });
+    });
   };
 
   return (
@@ -58,7 +49,7 @@ function UserForm() {
     </button>
   </div>
     <div style={styles.container}>
-      <h2 style={styles.header}>Add Participation</h2>
+      <h2 style={styles.header}>Edit Participation</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
         <label style={styles.label}>
           Experiment ID:

@@ -8,7 +8,7 @@ const Text = () => {
   const [text, setText] = useState('');
   const fetchText = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/', {
+      const response = await fetch('https://participant-tracker-backend.onrender.com/api/', {
         method: 'GET'
       });
       if (!response.ok) {

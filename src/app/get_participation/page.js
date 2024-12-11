@@ -15,7 +15,7 @@ function DataTable() {
 
   // Fetch data from the API on component mount
   useEffect(() => {
-    const apiUrl = 'http://127.0.0.1:8000/api/participant_experiment/'; // Replace with your API endpoint
+    const apiUrl = 'https://participant-tracker-backend.onrender.com/api/participant_experiment/'; // Replace with your API endpoint
 
     fetch(apiUrl)
       .then((response) => response.json())

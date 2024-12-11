@@ -22,7 +22,7 @@ function UserForm() {
 
   useEffect(() => {
     const fetchParticipation = async () => {
-      const apiUrl = 'http://127.0.0.1:8000/api/participant_experiment/'; 
+      const apiUrl = 'https://participant-tracker-backend.onrender.com/api/participant_experiment/'; 
   
       fetch(apiUrl, {
         method: 'GET',
@@ -59,7 +59,7 @@ function UserForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const apiUrl = 'http://127.0.0.1:8000/api/participant_experiment/'.concat(formData['id']);
+    const apiUrl = 'https://participant-tracker-backend.onrender.com/api/participant_experiment/'.concat(formData['id']);
 
     fetch(apiUrl, {
       method: 'DELETE',
