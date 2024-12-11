@@ -37,6 +37,11 @@ function UserForm() {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(formData),
+    }).then((response) => {
+      if(response.ok) {
+        alert("Successful");
+      };
+      
     });
   };
 
