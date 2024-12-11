@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/navigation';
 
 
-function getReport() {
+function GetReport() {
 
     const [formData, setFormData] = useState({
         start_date: '',
@@ -490,4 +490,4 @@ function getReport() {
     
     };
 
-export default getReport;
+export default GetReport;
